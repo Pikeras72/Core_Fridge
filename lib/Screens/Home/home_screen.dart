@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-//Como centrar realmente el AppBar cambiando el tamaño de la campana
+//Como centrar realmente el AppBar
 class HomeScreen extends StatelessWidget{
   const HomeScreen([Key? key]) : super(key: key);
   @override

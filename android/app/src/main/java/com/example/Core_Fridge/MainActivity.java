@@ -1,4 +1,4 @@
-package com.example.prueba_flutter;
+package com.example.Core_Fridge;
 
 import io.flutter.embedding.android.FlutterActivity;
 

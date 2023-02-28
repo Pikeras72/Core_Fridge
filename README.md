@@ -1,4 +1,4 @@
-# prueba_flutter
+# Core_Fridge
 
 A new Flutter project.
 

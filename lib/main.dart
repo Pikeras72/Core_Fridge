@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prueba_flutter/Screens/Home/home_screen.dart';
+import 'Screens/Home/home_screen.dart';
 import 'Screens/Register/Components/register_screen.dart';
 
 
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Core Fridge',
       theme: ThemeData(
         // This is the theme of your application.
         //

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-//Como centrar realmente el AppBar
 class HomeScreen extends StatelessWidget{
   const HomeScreen([Key? key]) : super(key: key);
   @override
@@ -39,7 +38,7 @@ class HomeScreen extends StatelessWidget{
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconButton(onPressed: () => {}, icon: Icon(Icons.sentiment_satisfied_alt_rounded, color: Colors.green,),splashColor: Colors.green),
-                        IconButton(onPressed: () => {}, icon: Icon(Icons.sentiment_dissatisfied_rounded, color: Colors.amber,),splashColor: Colors.amber),
+                        IconButton(onPressed: () => {}, icon: Icon(Icons.sentiment_neutral_rounded, color: Colors.amber,),splashColor: Colors.amber),
                         IconButton(onPressed: () => {}, icon: Icon(Icons.sentiment_dissatisfied_rounded, color: Colors.red,),splashColor: Colors.red),
                       ],
                     ),

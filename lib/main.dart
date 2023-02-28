@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prueba_flutter/Screens/Home/home_screen.dart';
 import 'Screens/Register/Components/register_screen.dart';
 
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Register(),
+      home: const HomeScreen(),
     );
   }
 }

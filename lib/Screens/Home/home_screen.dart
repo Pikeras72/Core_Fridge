@@ -50,18 +50,37 @@ class HomeScreen extends StatelessWidget{
             ],
          )
       ),
-      body: SingleChildScrollView(
-        child: Column(
+      body: Column(
           children: [
-            SizedBox(height: 15,),
-            Tarjeta(Image.asset('assets/cocacola.jpg'), Colors.black, 35, 35, 6),
-            Tarjeta(Image.asset('assets/fanta.jpg'), Colors.black, 35, 35, 6),
-            Tarjeta(Image.asset('assets/nestea.png'), Colors.black, 35, 35, 6),
-            Tarjeta(Image.asset('assets/cocacola.jpg'), Colors.black, 35, 35, 6),
-            Tarjeta(Image.asset('assets/cocacola.jpg'), Colors.black, 35, 35, 6),
+            SizedBox(height: 10,),
+            Container(
+              width: 175,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.white),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  BotonCircular(Colors.green, Colors.white, "Bebida", 35),
+                  SizedBox(width: 5,),
+                  BotonCircular(Colors.green, Colors.white, "Comida", 35),
+                ],
+              ),
+            ),
+            SizedBox(height: 10,),
+            Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Tarjeta(Image.asset('assets/agua.jpg'), Colors.black, 35, 35, 6),
+                      Tarjeta(Image.asset('assets/aquarius.jpg'), Colors.black, 35, 35, 6),
+                      Tarjeta(Image.asset('assets/cocacola.jpg'), Colors.black, 35, 35, 6),
+                      Tarjeta(Image.asset('assets/fanta.jpg'), Colors.black, 35, 35, 6),
+                      Tarjeta(Image.asset('assets/nestea.png'), Colors.black, 35, 35, 6),
+                    ],
+                  ),
+                ),
+            )
           ],
         ),
-      )
     );
   }
 }

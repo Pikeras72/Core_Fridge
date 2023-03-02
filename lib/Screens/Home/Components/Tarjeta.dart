@@ -11,10 +11,11 @@ class Tarjeta extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Color.fromRGBO(255, 249, 227, 1),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(this.radioTarjeta))),
       elevation: this.elevacion,
       shadowColor: this.colorSombra,
-      margin: EdgeInsets.only(top: 10,left: 10,right: 10, bottom: 5),
+      margin: EdgeInsets.only(left: 10,right: 10, bottom: 12),
       child: Row(
         children: [
           Container(

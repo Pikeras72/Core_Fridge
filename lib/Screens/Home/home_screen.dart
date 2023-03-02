@@ -1,3 +1,5 @@
+import 'package:Core_Fridge/Screens/Home/Components/BotonCircular.dart';
+import 'package:Core_Fridge/Screens/Home/Components/Tarjeta.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget{
@@ -5,11 +7,11 @@ class HomeScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.green,
       appBar: AppBar(
          backgroundColor: Colors.white,
-         elevation: 7,
-         shadowColor: Colors.greenAccent,
+         elevation: 10,
+         shadowColor: Colors.black,
          toolbarHeight: 120,
          shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(35))),
          title: Column(
@@ -31,7 +33,7 @@ class HomeScreen extends StatelessWidget{
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ElevatedButton(onPressed: () => {}, child: Text("Ver Todo",style: TextStyle(color: Colors.white)),style: ButtonStyle(shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(35),top: Radius.circular(35))),),overlayColor: MaterialStatePropertyAll(Colors.white),backgroundColor: MaterialStatePropertyAll(Colors.green),),),
+                  BotonCircular(Colors.green,Colors.white,"Ver Todo",35),
                   Container(
                     width: 150,
                     child: Row(
@@ -48,7 +50,18 @@ class HomeScreen extends StatelessWidget{
             ],
          )
       ),
-
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 15,),
+            Tarjeta(Image.asset('assets/cocacola.jpg'), Colors.black, 35, 35, 6),
+            Tarjeta(Image.asset('assets/fanta.jpg'), Colors.black, 35, 35, 6),
+            Tarjeta(Image.asset('assets/nestea.png'), Colors.black, 35, 35, 6),
+            Tarjeta(Image.asset('assets/cocacola.jpg'), Colors.black, 35, 35, 6),
+            Tarjeta(Image.asset('assets/cocacola.jpg'), Colors.black, 35, 35, 6),
+          ],
+        ),
+      )
     );
   }
 }

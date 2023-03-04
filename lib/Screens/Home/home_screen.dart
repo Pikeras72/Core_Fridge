@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget{
          backgroundColor: Colors.white,
          elevation: 10,
          shadowColor: Colors.black,
-         toolbarHeight: 120,
+         toolbarHeight: 150,
          shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(35))),
          title: Column(
             children: [
@@ -31,50 +31,50 @@ class HomeScreen extends StatelessWidget{
               ),
               SizedBox(height: 10,),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  BotonCircular(Colors.green,Colors.white,"Ver Todo",35),
                   Container(
-                    width: 150,
+                    width: 268 ,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.black12),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        IconButton(onPressed: () => {}, icon: Icon(Icons.sentiment_satisfied_alt_rounded, color: Colors.green,),splashColor: Colors.green),
-                        IconButton(onPressed: () => {}, icon: Icon(Icons.sentiment_neutral_rounded, color: Colors.amber,),splashColor: Colors.amber),
-                        IconButton(onPressed: () => {}, icon: Icon(Icons.sentiment_dissatisfied_rounded, color: Colors.red,),splashColor: Colors.red),
+                        BotonCircular(Colors.green, Colors.white,"Ver Todo",10),
+                        SizedBox(width: 6,),
+                        BotonCircular(Colors.grey, Colors.white, "Bebida", 10),
+                        SizedBox(width: 6,),
+                        BotonCircular(Colors.grey, Colors.white, "Comida", 10),
                       ],
                     ),
-                  )
+                  ),
                 ],
-              )
+              ),
+              SizedBox(height: 10,),
+              Container(
+                margin: EdgeInsets.only(bottom: 5),
+                child:
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("NUM items", style: TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.bold)),
+                  ],
+                ),
+              ),
             ],
          )
       ),
       body: Column(
           children: [
-            SizedBox(height: 10,),
-            Container(
-              width: 175,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.white),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  BotonCircular(Colors.green, Colors.white, "Bebida", 35),
-                  SizedBox(width: 5,),
-                  BotonCircular(Colors.green, Colors.white, "Comida", 35),
-                ],
-              ),
-            ),
-            SizedBox(height: 10,),
             Expanded(
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Tarjeta(Image.asset('assets/agua.jpg'), Colors.black, 35, 35, 6),
-                      Tarjeta(Image.asset('assets/aquarius.jpg'), Colors.black, 35, 35, 6),
-                      Tarjeta(Image.asset('assets/cocacola.jpg'), Colors.black, 35, 35, 6),
-                      Tarjeta(Image.asset('assets/fanta.jpg'), Colors.black, 35, 35, 6),
-                      Tarjeta(Image.asset('assets/nestea.png'), Colors.black, 35, 35, 6),
+                      Tarjeta(Image.asset('assets/agua.jpg'), Colors.black, 35, 35, 6, "Agua Mineral"),
+                      Tarjeta(Image.asset('assets/cocacola.jpg'), Colors.black, 35, 35, 6, "CocaCola"),
+                      Tarjeta(Image.asset('assets/fanta.jpg'), Colors.black, 35, 35, 6, "Fanta"),
+                      Tarjeta(Image.asset('assets/aquarius.jpg'), Colors.black, 35, 35, 6, "Aquarius"),
+                      Tarjeta(Image.asset('assets/nestea.png'), Colors.black, 35, 35, 6, "Nestea"),
+                      SizedBox(height: 15,),
                     ],
                   ),
                 ),

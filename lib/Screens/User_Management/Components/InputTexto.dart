@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class InputTexto extends StatelessWidget{
 
-  final Color colorTexto, colorCursor;
+  final Color colorTexto, colorCursor, colorPista;
   final double anchoInput, anchoCursor, margenIzquierdo, alturaCursor, tamanioLetra, paddingVertical;
   final String texto;
 
-  InputTexto(this.colorTexto, this.margenIzquierdo, this.alturaCursor, this.tamanioLetra, this.paddingVertical, this.texto, this.colorCursor, this.anchoInput, this.anchoCursor);
+  InputTexto(this.colorTexto, this.margenIzquierdo, this.alturaCursor, this.tamanioLetra, this.paddingVertical, this.texto, this.colorCursor, this.anchoInput, this.anchoCursor, this.colorPista);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class InputTexto extends StatelessWidget{
         margin: EdgeInsets.only(left: this.margenIzquierdo),
         child: Container(
           width: this.anchoInput,
-          child: TextField(cursorColor: this.colorCursor,cursorHeight: this.anchoCursor,style: TextStyle(fontSize: this.tamanioLetra,color: this.colorTexto),decoration: InputDecoration(labelText: this.texto, contentPadding: EdgeInsets.symmetric(vertical: this.paddingVertical), labelStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.green, fontSize: this.tamanioLetra-3)),),
+          child: TextField(cursorColor: this.colorCursor,cursorHeight: this.anchoCursor,style: TextStyle(fontSize: this.tamanioLetra,color: this.colorTexto),decoration: InputDecoration(labelText: this.texto, contentPadding: EdgeInsets.symmetric(vertical: this.paddingVertical), labelStyle: TextStyle(fontWeight: FontWeight.bold, color: this.colorPista, fontSize: this.tamanioLetra-3)),),
         )
     );
   }

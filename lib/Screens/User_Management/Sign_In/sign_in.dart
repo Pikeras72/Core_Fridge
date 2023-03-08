@@ -29,9 +29,9 @@ class Sign_In extends StatelessWidget{
                               child: Text("Hello\nAgain!", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white,fontSize: 45), maxLines: 2,)
                           ),
                           const SizedBox(height: 235),
-                          InputTexto(Colors.green, 0, 25, 20, 5, "Enter Email", Colors.green, 280, 25, Colors.green),
+                          InputTexto(Colors.green, 0, 25, 20, 5, "Enter Email", Colors.green, 280, 25, Colors.green, false),
                           const SizedBox(height: 30),
-                          InputTexto(Colors.green, 0, 25, 20, 5, "Enter Password", Colors.green, 280, 25, Colors.green),
+                          InputTexto(Colors.green, 0, 25, 20, 5, "Enter Password", Colors.green, 280, 25, Colors.green, true),
                           const SizedBox(height: 70),
                           Container(
                               width: 125,

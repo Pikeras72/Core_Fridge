@@ -6,6 +6,7 @@ class HomeScreen extends StatelessWidget{
   const HomeScreen([Key? key]) : super(key: key);
   @override
   Widget build(BuildContext context){
+    var numItems = 9;
     return Scaffold(
       backgroundColor: Colors.green,
       appBar: AppBar(
@@ -57,7 +58,7 @@ class HomeScreen extends StatelessWidget{
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("NUM ITEMS", style: TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.bold)),
+                    Text("${numItems} ITEMS", style: TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.bold)),
                   ],
                 ),
               ),
@@ -70,14 +71,15 @@ class HomeScreen extends StatelessWidget{
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Tarjeta(Image.asset('assets/agua.jpg'), Colors.black, 35, 35, 6, "Agua Mineral"),
-                      Tarjeta(Image.asset('assets/cocacola.jpg'), Colors.black, 35, 35, 6, "CocaCola"),
-                      Tarjeta(Image.asset('assets/fanta.jpg'), Colors.black, 35, 35, 6, "Fanta"),
-                      Tarjeta(Image.asset('assets/aquarius.jpg'), Colors.black, 35, 35, 6, "Aquarius"),
-                      Tarjeta(Image.asset('assets/nestea.png'), Colors.black, 35, 35, 6, "Nestea"),
-                      Tarjeta(Image.asset('assets/kitkat.jpg'), Colors.black, 35, 35, 6, "KitKat"),
-                      Tarjeta(Image.asset('assets/nestea.png'), Colors.black, 35, 35, 6, "Nestea"),
-                      Tarjeta(Image.asset('assets/nestea.png'), Colors.black, 35, 35, 6, "Nestea"),
+                      Tarjeta(Image.asset('assets/agua.jpg'), Colors.black, 35, 35, 6, "Agua Mineral","500ml", 0.75),
+                      Tarjeta(Image.asset('assets/aquarius.jpg'), Colors.black, 35, 35, 6, "Aquarius","330ml", 1),
+                      Tarjeta(Image.asset('assets/cocacola.jpg'), Colors.black, 35, 35, 6, "CocaCola","330ml", 1),
+                      Tarjeta(Image.asset('assets/donetes.jpg'), Colors.black, 35, 35, 6, "Donettes","150g", 1),
+                      Tarjeta(Image.asset('assets/fanta.jpg'), Colors.black, 35, 35, 6, "Fanta","330ml", 1),
+                      Tarjeta(Image.asset('assets/kitkat.jpg'), Colors.black, 35, 35, 6, "KitKat","45g", 1),
+                      Tarjeta(Image.asset('assets/fuet.jpg'), Colors.black, 35, 35, 6, "Mini Fuet","50g", 1),
+                      Tarjeta(Image.asset('assets/nestea.png'), Colors.black, 35, 35, 6, "Nestea","330ml", 1),
+                      Tarjeta(Image.asset('assets/sandwich.jpg'), Colors.black, 35, 35, 6, "Sandwich","150g", 1.2),
                       SizedBox(height: 15,),
                     ],
                   ),

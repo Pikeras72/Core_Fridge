@@ -4,10 +4,10 @@ class Tarjeta extends StatelessWidget{
 
   final Image imagen;
   final Color colorSombra;
-  final double radioImagen, radioTarjeta, elevacion;
-  final String textoProducto;
+  final double radioImagen, radioTarjeta, elevacion, precio;
+  final String textoProducto, textoCantidad;
 
-  Tarjeta(this.imagen, this.colorSombra, this.radioImagen, this.radioTarjeta, this.elevacion, this.textoProducto);
+  Tarjeta(this.imagen, this.colorSombra, this.radioImagen, this.radioTarjeta, this.elevacion, this.textoProducto, this.textoCantidad, this.precio);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,11 @@ class Tarjeta extends StatelessWidget{
             margin: EdgeInsets.only(top: 20),
            child: Column(
              children: [
-               Text(this.textoProducto,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+               Text(this.textoProducto,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 21),),
+               SizedBox(height: 10,),
+               Text(this.textoCantidad,style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 15),),
+               SizedBox(height: 20,),
+               Text("${this.precio} €",style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold,fontSize: 21),),
              ],
            ), 
           ),

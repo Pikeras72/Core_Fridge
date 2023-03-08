@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget{
     return Scaffold(
       backgroundColor: Colors.green,
       appBar: AppBar(
+         automaticallyImplyLeading: false,
          backgroundColor: Colors.white,
          elevation: 10,
          shadowColor: Colors.black,
@@ -56,7 +57,7 @@ class HomeScreen extends StatelessWidget{
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("NUM items", style: TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.bold)),
+                    Text("NUM ITEMS", style: TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.bold)),
                   ],
                 ),
               ),
@@ -73,6 +74,9 @@ class HomeScreen extends StatelessWidget{
                       Tarjeta(Image.asset('assets/cocacola.jpg'), Colors.black, 35, 35, 6, "CocaCola"),
                       Tarjeta(Image.asset('assets/fanta.jpg'), Colors.black, 35, 35, 6, "Fanta"),
                       Tarjeta(Image.asset('assets/aquarius.jpg'), Colors.black, 35, 35, 6, "Aquarius"),
+                      Tarjeta(Image.asset('assets/nestea.png'), Colors.black, 35, 35, 6, "Nestea"),
+                      Tarjeta(Image.asset('assets/kitkat.jpg'), Colors.black, 35, 35, 6, "KitKat"),
+                      Tarjeta(Image.asset('assets/nestea.png'), Colors.black, 35, 35, 6, "Nestea"),
                       Tarjeta(Image.asset('assets/nestea.png'), Colors.black, 35, 35, 6, "Nestea"),
                       SizedBox(height: 15,),
                     ],

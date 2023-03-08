@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'Screens/Home/home_screen.dart';
-import 'Screens/Register/register_screen.dart';
+
+import 'Screens/User_Management/Register/register_screen.dart';
+
 
 
 void main() {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const Register(),
     );
   }
 }

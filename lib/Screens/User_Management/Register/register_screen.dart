@@ -19,7 +19,7 @@ class Register extends StatelessWidget{
           children: [
             Container(
               width: double.infinity,
-              height: 415.5,
+              height: 730.5,
               child: CustomPaint(
                 child: Container(
                     margin: EdgeInsets.only(left: 60),
@@ -31,28 +31,31 @@ class Register extends StatelessWidget{
                         const SizedBox(height: 60),
                         InputTexto(Colors.white, 0, 25, 20, 5, "Enter Name", Colors.white, 280, 25, Colors.white),
                         const SizedBox(height: 30),
-                        InputTexto(Colors.green, 0, 25, 20, 5, "Enter Email", Colors.green, 280, 25, Colors.green),
+                        InputTexto(Colors.white, 0, 25, 20, 5, "Enter Email", Colors.white, 280, 25, Colors.white),
+                        const SizedBox(height: 30),
+                        InputTexto(Colors.white, 0, 25, 20, 5, "Enter Password", Colors.white, 280, 25, Colors.white),
+                        const SizedBox(height: 30),
+                        InputTexto(Colors.white, 0, 25, 20, 5, "Confirm Password", Colors.white, 280, 25, Colors.white),
+                        const SizedBox(height: 110),
+                        Container(
+                            width: 155,
+                            height: 45,
+                            margin: EdgeInsets.only(left: 130),
+                            child: TextButton(
+                              onPressed: () =>{
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => HomeScreen()),
+                              )
+                            },
+                              child: Center(child: Text("REGISTER", style: TextStyle(fontSize: 30,color: Colors.black, fontWeight: FontWeight.bold, ),)),
+                            )
+                        ),
                       ],
                     )
                 ),
                 painter: MiPainterPersonalizado(),
               ),
-            ),
-            const SizedBox(height: 30),
-            InputTexto(Colors.green, 60, 25, 20, 5, "Enter Password", Colors.green, 280, 25, Colors.green),
-            const SizedBox(height: 30),
-            InputTexto(Colors.green, 60, 25, 20, 5, "Confirm Password", Colors.green, 280, 25, Colors.green),
-            const SizedBox(height: 80),
-            Container(
-                width: 154,
-                height: 45,
-                margin: EdgeInsets.only(left: 195),
-                child: TextButton(onPressed: () =>{
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
-                  )
-                }, child: Center(child: Text("REGISTER", style: TextStyle(fontSize: 30,color: Colors.green),)), )
             ),
             const SizedBox(height:60),
             Container(
@@ -82,19 +85,56 @@ class Register extends StatelessWidget{
 class MiPainterPersonalizado extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = new Paint();
-    paint.color = Colors.green;
-    paint.style = PaintingStyle.fill;
-    paint.strokeCap = StrokeCap.round;
-    paint.strokeWidth = 5;
+    final paintDarkGreen = new Paint();
+    paintDarkGreen.color = Color.fromRGBO(16, 135, 27, 1);
+    paintDarkGreen.style = PaintingStyle.fill;
+    paintDarkGreen.strokeCap = StrokeCap.round;
+    paintDarkGreen.strokeWidth = 5;
 
-    final path = new Path();
-    path.moveTo(size.width*0.3, 0);
-    path.lineTo(size.width, 0);
-    path.lineTo(size.width, size.height*0.78);
-    path.lineTo(0, size.height*0.93);
-    path.lineTo(0, size.height*0.3);
-    canvas.drawPath(path, paint);
+    final pathDarkGreen = new Path();
+    pathDarkGreen.moveTo(size.width*0.3, 0);
+    pathDarkGreen.lineTo(size.width, 0);
+    pathDarkGreen.lineTo(size.width, size.height*0.45);
+    pathDarkGreen.lineTo(0, size.height*0.70);
+    pathDarkGreen.lineTo(0, size.height*0.35);
+
+    canvas.drawPath(pathDarkGreen, paintDarkGreen);
+
+    final paintLightGreen = new Paint();
+    paintLightGreen.color = Color.fromRGBO(72, 194, 58, 1);
+    paintLightGreen.style = PaintingStyle.fill;
+    paintLightGreen.strokeCap = StrokeCap.round;
+    paintLightGreen.strokeWidth = 5;
+
+    final pathLightGreen = new Path();
+    pathLightGreen.moveTo(size.width, size.height*0.45);
+    pathLightGreen.lineTo(size.width, size.height*0.96);
+    pathLightGreen.lineTo(0, size.height*0.84);
+    pathLightGreen.lineTo(0, size.height*0.70);
+
+    canvas.drawPath(pathLightGreen, paintLightGreen);
+
+    final paintMediumGreen = new Paint();
+    paintMediumGreen.color = Color.fromRGBO(87, 158, 77, 1);
+    paintMediumGreen.style = PaintingStyle.fill;
+    paintMediumGreen.strokeCap = StrokeCap.round;
+    paintMediumGreen.strokeWidth = 5;
+
+    final pathMediumGreen = new Path();
+    pathMediumGreen.moveTo(0, 0);
+    pathMediumGreen.lineTo(size.width*0.3, 0);
+    pathMediumGreen.lineTo(0, size.height*0.35);
+
+    canvas.drawPath(pathMediumGreen, paintMediumGreen);
+
+    final paintCircle = new Paint();
+    paintCircle.color = Color.fromRGBO(240, 233, 115, 1);
+    paintCircle.style = PaintingStyle.fill;
+
+    final pathCircle = new Path();
+    pathCircle.moveTo(size.width, size.height);
+
+    canvas.drawCircle(Offset(size.width*0.815, size.height*0.97), 47, paintCircle);
   }
 
   @override

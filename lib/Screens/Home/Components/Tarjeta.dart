@@ -27,10 +27,10 @@ class Tarjeta extends StatelessWidget{
            child: Column(
              children: [
                Text(this.textoProducto,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 21),),
-               SizedBox(height: 10,),
+               SizedBox(height: 5,),
                Text(this.textoCantidad,style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 15),),
-               SizedBox(height: 20,),
-               Text("${this.precio} €",style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold,fontSize: 21),),
+               SizedBox(height: 15,),
+               Text("${this.precio} €",style: TextStyle(fontFamily: 'Glegoo',color: Colors.green, fontSize: 25),),
              ],
            ), 
           ),

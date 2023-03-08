@@ -18,18 +18,24 @@ class HomeScreen extends StatelessWidget{
          shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(35))),
          title: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(onPressed: () => {}, icon: Icon(Icons.settings,color: Colors.black45,),iconSize: 30,),
-                  Row(
+              Builder(
+                builder: (context) {
+                  return Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image.asset('assets/images/coreIcon.png',width: 40,height: 40,),
-                      Image.asset('assets/images/coreFridge.png',width: 175,)
+                      IconButton(onPressed: ()  {
+                        Scaffold.of(context).openDrawer();
+                      }, icon: Icon(Icons.settings,color: Colors.black45,),iconSize: 30,),
+                      Row(
+                        children: [
+                          Image.asset('assets/images/coreIcon.png',width: 40,height: 40,),
+                          Image.asset('assets/images/coreFridge.png',width: 175,)
+                        ],
+                      ),
+                      IconButton(onPressed: () => {}, icon: Icon(Icons.notifications), color: Colors.black26, iconSize: 30,)
                     ],
-                  ),
-                  IconButton(onPressed: () => {}, icon: Icon(Icons.notifications), color: Colors.black26, iconSize: 30,)
-                ],
+                  );
+                }
               ),
               SizedBox(height: 10,),
               Row(
@@ -86,6 +92,17 @@ class HomeScreen extends StatelessWidget{
                 ),
             )
           ],
+        ),
+        drawer: Container(
+          color: Colors.white,
+          width: MediaQuery.of(context).size.width/2,
+          height: double.infinity,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text("HOLAAA")
+            ],
+          ),
         ),
     );
   }

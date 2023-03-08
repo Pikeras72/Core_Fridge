@@ -2,7 +2,7 @@ import 'package:Core_Fridge/Screens/User_Management/Register/register_screen.dar
 import 'package:flutter/material.dart';
 
 import '../../Home/home_screen.dart';
-import '../Components/InputTexto.dart';
+import '../Components/input_texto.dart';
 
 
 class Sign_In extends StatelessWidget{

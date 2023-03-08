@@ -5,7 +5,7 @@ import 'package:Core_Fridge/Screens/User_Management/Sign_In/sign_in.dart';
 
 import 'package:flutter/material.dart';
 
-import '../Components/InputTexto.dart';
+import '../Components/input_texto.dart';
 
 class Register extends StatelessWidget{
   const Register([Key? key]) : super(key: key);

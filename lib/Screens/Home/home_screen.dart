@@ -1,6 +1,7 @@
 import 'package:Core_Fridge/Screens/Home/Components/BotonCircular.dart';
 import 'package:Core_Fridge/Screens/Home/Components/Tarjeta.dart';
 import 'package:flutter/material.dart';
+import 'Components/OpcionDrawer.dart';
 
 class HomeScreen extends StatelessWidget{
   const HomeScreen([Key? key]) : super(key: key);
@@ -9,6 +10,7 @@ class HomeScreen extends StatelessWidget{
     var numItems = 9;
     return Scaffold(
       backgroundColor: Colors.green,
+      drawerScrimColor: Colors.white30,
       appBar: AppBar(
          automaticallyImplyLeading: false,
          backgroundColor: Colors.white,
@@ -25,7 +27,7 @@ class HomeScreen extends StatelessWidget{
                     children: [
                       IconButton(onPressed: ()  {
                         Scaffold.of(context).openDrawer();
-                      }, icon: Icon(Icons.settings,color: Colors.black45,),iconSize: 30,),
+                      }, icon: Icon(Icons.menu,color: Colors.black45,),iconSize: 30,),
                       Row(
                         children: [
                           Image.asset('assets/images/coreIcon.png',width: 40,height: 40,),
@@ -64,7 +66,7 @@ class HomeScreen extends StatelessWidget{
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("${numItems} ITEMS", style: TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.bold)),
+                    Text("${numItems} ITEMS", style: TextStyle(color: Colors.black38, fontFamily: 'Glegoo', fontSize: 14, fontWeight: FontWeight.bold)),
                   ],
                 ),
               ),
@@ -95,12 +97,52 @@ class HomeScreen extends StatelessWidget{
         ),
         drawer: Container(
           color: Colors.white,
-          width: MediaQuery.of(context).size.width/2,
+          width: MediaQuery.of(context).size.width*0.7,
           height: double.infinity,
-          child: Row(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("HOLAAA")
+              Container(
+                width: MediaQuery.of(context).size.width*0.7,
+                height: 225,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Color.fromRGBO(16, 135, 27, 1),
+                      Color.fromRGBO(72, 205, 58, 1)
+                    ],
+                    stops: [0.25,0.75]
+                  )
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 40),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          child: Image.asset('assets/images/Core_Fridge_Icon.png'),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Text("Core Fridge", style: TextStyle(fontFamily: 'Glegoo',fontSize: 26,color: Colors.white, fontWeight: FontWeight.bold),),
+                    )
+                  ],
+                ),
+              ),
+              OpcionDrawer("Perfil",Icon(Icons.person)),
+              Divider(color: Colors.black,),
+              OpcionDrawer("Ajustes",Icon(Icons.settings)),
+              Divider(color: Colors.black,),
+              OpcionDrawer("Cerrar Sesión",Icon(Icons.logout)),
+              Divider(color: Colors.black,)
             ],
           ),
         ),

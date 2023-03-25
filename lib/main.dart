@@ -1,6 +1,6 @@
+import 'package:Core_Fridge/Screens/Products/Producto.dart';
 import 'package:Core_Fridge/Screens/User_Management/Sign_In/sign_in.dart';
 import 'package:flutter/material.dart';
-
 import 'Screens/User_Management/Register/register_screen.dart';
 
 
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Sign_In(),
+      home: Producto(),
     );
   }
 }

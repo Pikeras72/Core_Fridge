@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Producto extends StatefulWidget{
+  final Image imagen;
+
+  Producto(this.imagen);
+
   @override
   State<StatefulWidget> createState() => _firstState();
 }
@@ -20,7 +24,7 @@ class _firstState extends State<Producto>{
               toolbarHeight: 200,
               flexibleSpace: Container(
                 margin: EdgeInsets.only(top: 55, bottom: 10),
-                child: Image.asset('assets/images/pruebacoca.png'),
+                child: widget.imagen,
               ),
               leading: Container(
                 margin: EdgeInsets.only(top: 20),

@@ -1,5 +1,6 @@
 import 'package:Core_Fridge/Screens/Home/Components/BotonCircular.dart';
 import 'package:Core_Fridge/Screens/Home/Components/Tarjeta.dart';
+import 'package:Core_Fridge/Screens/Products/Producto.dart';
 import 'package:flutter/material.dart';
 import 'Components/OpcionDrawer.dart';
 
@@ -79,15 +80,15 @@ class HomeScreen extends StatelessWidget{
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Tarjeta(Image.asset('assets/images/agua.jpg'), Colors.black, 35, 35, 6, "Agua Mineral","500ml", 0.75),
-                      Tarjeta(Image.asset('assets/images/aquarius.jpg'), Colors.black, 35, 35, 6, "Aquarius","330ml", 1),
-                      Tarjeta(Image.asset('assets/images/cocacola.jpg'), Colors.black, 35, 35, 6, "CocaCola","330ml", 1),
-                      Tarjeta(Image.asset('assets/images/donetes.jpg'), Colors.black, 35, 35, 6, "Donettes","150g", 1),
-                      Tarjeta(Image.asset('assets/images/fanta.jpg'), Colors.black, 35, 35, 6, "Fanta","330ml", 1),
-                      Tarjeta(Image.asset('assets/images/kitkat.jpg'), Colors.black, 35, 35, 6, "KitKat","45g", 1),
-                      Tarjeta(Image.asset('assets/images/fuet.jpg'), Colors.black, 35, 35, 6, "Mini Fuet","50g", 1),
-                      Tarjeta(Image.asset('assets/images/nestea.png'), Colors.black, 35, 35, 6, "Nestea","330ml", 1),
-                      Tarjeta(Image.asset('assets/images/sandwich.jpg'), Colors.black, 35, 35, 6, "Sandwich","150g", 1.2),
+                      Tarjeta(Image.asset('assets/images/agua.jpg'), Colors.black, 35, 35, 6, "Agua Mineral","500ml", 0.75, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/aquarius.jpg'), Colors.black, 35, 35, 6, "Aquarius","330ml", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/cocacola.jpg'), Colors.black, 35, 35, 6, "CocaCola","330ml", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/donetes.jpg'), Colors.black, 35, 35, 6, "Donettes","150g", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/fanta.jpg'), Colors.black, 35, 35, 6, "Fanta","330ml", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/kitkat.jpg'), Colors.black, 35, 35, 6, "KitKat","45g", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/fuet.jpg'), Colors.black, 35, 35, 6, "Mini Fuet","50g", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/nestea.png'), Colors.black, 35, 35, 6, "Nestea","330ml", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/sandwich.jpg'), Colors.black, 35, 35, 6, "Sandwich","150g", 1.2, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
                       SizedBox(height: 15,),
                     ],
                   ),
@@ -146,6 +147,41 @@ class HomeScreen extends StatelessWidget{
             ],
           ),
         ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+
+        },
+        splashColor: Color.fromRGBO(72, 205, 58, 1),
+        backgroundColor: Colors.green,
+        elevation: 12,
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Container(
+              width: 44,
+              height: 44,
+              decoration: ShapeDecoration(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
+              ),
+              child: Icon(Icons.shopping_basket_sharp, color: Colors.white, size: 27,),
+            ),
+            Positioned(
+              left: 36,
+              child: Container(
+                alignment: Alignment.center,
+                width: 22,
+                height: 22,
+                decoration: ShapeDecoration(
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(8))),
+                  color: Colors.black,
+                ),
+                child: Text("4", style: TextStyle(fontSize: 16),),
+              ),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
     );
   }
 }

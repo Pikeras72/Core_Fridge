@@ -80,15 +80,15 @@ class HomeScreen extends StatelessWidget{
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Tarjeta(Image.asset('assets/images/agua.jpg'), Colors.black, 35, 35, 6, "Agua Mineral","500ml", 0.75, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
-                      Tarjeta(Image.asset('assets/images/aquarius.jpg'), Colors.black, 35, 35, 6, "Aquarius","330ml", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/agua.jpg'), Colors.black, 35, 35, 6, "Agua Mineral","500ml", 0.75, Producto(Image.asset('assets/images/aguaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/aquarius.jpg'), Colors.black, 35, 35, 6, "Aquarius","330ml", 1, Producto(Image.asset('assets/images/aquariusProducto.png'))),
                       Tarjeta(Image.asset('assets/images/cocacola.jpg'), Colors.black, 35, 35, 6, "CocaCola","330ml", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
-                      Tarjeta(Image.asset('assets/images/donetes.jpg'), Colors.black, 35, 35, 6, "Donettes","150g", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
-                      Tarjeta(Image.asset('assets/images/fanta.jpg'), Colors.black, 35, 35, 6, "Fanta","330ml", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
-                      Tarjeta(Image.asset('assets/images/kitkat.jpg'), Colors.black, 35, 35, 6, "KitKat","45g", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
-                      Tarjeta(Image.asset('assets/images/fuet.jpg'), Colors.black, 35, 35, 6, "Mini Fuet","50g", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
-                      Tarjeta(Image.asset('assets/images/nestea.png'), Colors.black, 35, 35, 6, "Nestea","330ml", 1, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
-                      Tarjeta(Image.asset('assets/images/sandwich.jpg'), Colors.black, 35, 35, 6, "Sandwich","150g", 1.2, Producto(Image.asset('assets/images/cocaColaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/donetes.jpg'), Colors.black, 35, 35, 6, "Donettes","150g", 1, Producto(Image.asset('assets/images/donetesProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/fanta.jpg'), Colors.black, 35, 35, 6, "Fanta","330ml", 1, Producto(Image.asset('assets/images/fantaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/kitkat.jpg'), Colors.black, 35, 35, 6, "KitKat","45g", 1, Producto(Image.asset('assets/images/kitkatProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/fuet.jpg'), Colors.black, 35, 35, 6, "Mini Fuet","50g", 1, Producto(Image.asset('assets/images/fuetProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/nestea.png'), Colors.black, 35, 35, 6, "Nestea","330ml", 1, Producto(Image.asset('assets/images/nesteaProducto.png'))),
+                      Tarjeta(Image.asset('assets/images/sandwich.jpg'), Colors.black, 35, 35, 6, "Sandwich","150g", 1.2, Producto(Image.asset('assets/images/sandwichProducto.png'))),
                       SizedBox(height: 15,),
                     ],
                   ),
@@ -166,7 +166,7 @@ class HomeScreen extends StatelessWidget{
               child: Icon(Icons.shopping_basket_sharp, color: Colors.white, size: 27,),
             ),
             Positioned(
-              left: 36,
+              left: 38,
               child: Container(
                 alignment: Alignment.center,
                 width: 22,

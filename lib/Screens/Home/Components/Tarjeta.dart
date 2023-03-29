@@ -29,11 +29,11 @@ class Tarjeta extends StatelessWidget{
               margin: EdgeInsets.only(top: 20),
               child: Column(
                 children: [
-                  Text(this.textoProducto,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 21),),
+                  Text(this.textoProducto,style: TextStyle(fontFamily: 'Monstro',fontSize: 21),),
                   SizedBox(height: 5,),
-                  Text(this.textoCantidad,style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 15),),
+                  Text(this.textoCantidad,style: TextStyle(fontFamily: 'Monstro',color: Colors.grey,fontSize: 17),),
                   SizedBox(height: 15,),
-                  Text("${this.precio} €",style: TextStyle(fontFamily: 'Glegoo',color: Colors.green, fontSize: 25),),
+                  Text("${this.precio} €",style: TextStyle(fontFamily: 'Monstro',color: Colors.green, fontSize: 30),),
                 ],
               ),
             ),

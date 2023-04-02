@@ -12,22 +12,21 @@ class _flechaBotando extends State<FlechaBotando>{
 
   void changePosition(Timer t) async {
     setState(() {
-      marginTop = marginTop == 0 ? 20 : 0;
+      marginTop = marginTop == 0 ? 15 : 0;
     });
   }
 
   @override
   void initState() {
-    super.initState();
     marginTop = 0;
-    Timer.periodic(const Duration(milliseconds: 750), changePosition);
+    Timer.periodic(const Duration(milliseconds: 600), changePosition);
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
         margin: EdgeInsets.only(top: marginTop),
-        child: Icon(Icons.arrow_downward, color: Colors.white)
+        child: Icon(Icons.arrow_upward, color: Colors.white)
     );
   }
 }

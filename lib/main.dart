@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'Screens/User_Management/Register/register_screen.dart';
 
 
-
 void main() {
   runApp(const MyApp());
 }

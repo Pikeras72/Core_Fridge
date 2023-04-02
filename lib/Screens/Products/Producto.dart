@@ -5,11 +5,11 @@ import 'Components/FlechaBotando.dart';
 
 class Producto extends StatefulWidget{
   final Image imagen;
-  final String nombreProducto;
+  final String nombreProducto, descripcionProducto;
   final int valoraciones = 27;
   final double mediaValoraciones = 4.2;
 
-  Producto(this.imagen, this.nombreProducto);
+  Producto(this.imagen, this.nombreProducto, this.descripcionProducto);
 
   @override
   State<StatefulWidget> createState() => _firstState();
@@ -92,7 +92,7 @@ class _firstState extends State<Producto>{
                   decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(40),topRight: Radius.circular(40)), color: Colors.green,),
                   child: Column(
                     children: [
-                        Container(
+                      Container(
                         margin: EdgeInsets.only(top: 45, bottom: 15),
                         width: MediaQuery.of(context).size.width-1,
                         height: 230,
@@ -192,6 +192,10 @@ class _firstState extends State<Producto>{
                           ],
                         ),
                       ),
+                        Container(
+                          margin: EdgeInsets.only(left: 25, right: 25, top: 10, bottom: 15),
+                          child: Text(widget.descripcionProducto, textAlign: TextAlign.center ,style: TextStyle(color: Colors.white, fontSize: 19, fontWeight: FontWeight.bold)),
+                        ),
                         FlechaBotando()
                     ],
                   ),

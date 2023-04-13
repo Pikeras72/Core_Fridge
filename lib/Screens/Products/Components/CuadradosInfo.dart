@@ -20,7 +20,7 @@ class CuadradosInfo extends StatelessWidget{
           Text(this.especificacion, style: TextStyle(color: Colors.green, fontFamily: 'Monstro', fontSize: 13,),),
         ],
       ),
-      decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20)), color: Color.fromRGBO(165, 232, 167, 1), boxShadow: [BoxShadow(color: Colors.green, blurRadius: 2.0,spreadRadius: 0.0, offset: Offset(4.0, 4.0),)]),
+      decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20)), color: Color.fromRGBO(165, 232, 167, 1), boxShadow: [BoxShadow(color: Colors.green, blurRadius: 2.0,spreadRadius: 0.0, offset: Offset(2.5, 2.5),)]),
     );
   }
 

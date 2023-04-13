@@ -2,7 +2,7 @@ import 'package:Core_Fridge/Screens/Home/home_screen.dart';
 import 'package:Core_Fridge/Screens/Products/Components/CuadradosInfo.dart';
 import 'package:flutter/material.dart';
 import 'package:favorite_button/favorite_button.dart';
-import 'Components/FlechaBotando.dart';
+import 'Components/CuadradosCantidad.dart';
 
 class Producto extends StatefulWidget{
   final Image imagen;
@@ -94,7 +94,7 @@ class _firstState extends State<Producto>{
                   child: Column(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 45, bottom: 15),
+                        margin: EdgeInsets.only(top: 45, bottom: 13),
                         width: MediaQuery.of(context).size.width-1,
                         height: 230,
                         decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(40)), color: Colors.white,),
@@ -138,7 +138,6 @@ class _firstState extends State<Producto>{
                             Padding(
                               padding: const EdgeInsets.only(top:15, left: 45, right: 45),
                               child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   CuadradosInfo(27, "azúcar","g"),
@@ -155,7 +154,33 @@ class _firstState extends State<Producto>{
                         margin: EdgeInsets.only(left: 25, right: 25, top: 10, bottom: 15),
                         child: Text(widget.descripcionProducto, textAlign: TextAlign.center ,style: TextStyle(color: Colors.white, fontSize: 19, fontWeight: FontWeight.bold)),
                       ),
-                      FlechaBotando()
+                      Container(
+                          child: Icon(Icons.arrow_upward, color: Colors.white)
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 40, bottom: 13),
+                        width: MediaQuery.of(context).size.width-1,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              child: Text("Elije cantidad", style: TextStyle(color: Colors.white, fontFamily: 'Monstro', fontSize: 27, )),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top: 20, left: 25, right: 25),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  CuadradosCantidad(1),
+                                  CuadradosCantidad(2),
+                                  CuadradosCantidad(3),
+                                  CuadradosCantidad(12)
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 )

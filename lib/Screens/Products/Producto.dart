@@ -8,9 +8,9 @@ class Producto extends StatefulWidget{
   final Image imagen;
   final String nombreProducto, descripcionProducto;
   final int valoraciones = 27;
-  final double mediaValoraciones = 4.2;
+  final double mediaValoraciones = 4.2, precioProducto;
 
-  Producto(this.imagen, this.nombreProducto, this.descripcionProducto);
+  Producto(this.imagen, this.nombreProducto, this.precioProducto, this.descripcionProducto);
 
   @override
   State<StatefulWidget> createState() => _firstState();
@@ -88,7 +88,6 @@ class _firstState extends State<Producto>{
             ),
             SliverToBoxAdapter(
                 child: Container(
-                  height: 1500,
                   width: 500,
                   decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(40),topRight: Radius.circular(40)), color: Colors.green,),
                   child: Column(
@@ -161,22 +160,15 @@ class _firstState extends State<Producto>{
                         margin: EdgeInsets.only(top: 40, bottom: 13),
                         width: MediaQuery.of(context).size.width-1,
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
+                              margin: EdgeInsets.only(left: 25),
                               child: Text("Elije cantidad", style: TextStyle(color: Colors.white, fontFamily: 'Monstro', fontSize: 27, )),
                             ),
                             Container(
                               margin: EdgeInsets.only(top: 20, left: 25, right: 25),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  CuadradosCantidad(1),
-                                  CuadradosCantidad(2),
-                                  CuadradosCantidad(3),
-                                  CuadradosCantidad(12)
-                                ],
-                              ),
+                              child: CuadradosCantidad(widget.precioProducto),
                             )
                           ],
                         ),

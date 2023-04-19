@@ -5,14 +5,16 @@ class Tarjeta extends StatelessWidget{
 
   final Image imagen;
   final Color colorSombra;
-  final double radioImagen, radioTarjeta, elevacion, precio;
-  final String textoProducto, textoCantidad;
   final Producto producto;
+  final double radioImagen, radioTarjeta, elevacion;
+  final String textoProducto, textoCantidad;
 
-  Tarjeta(this.imagen, this.colorSombra, this.radioImagen, this.radioTarjeta, this.elevacion, this.textoProducto, this.textoCantidad, this.precio, this.producto);
+
+  Tarjeta(this.imagen, this.colorSombra, this.radioImagen, this.radioTarjeta, this.elevacion, this.textoProducto, this.textoCantidad, this.producto);
 
   @override
   Widget build(BuildContext context) {
+    double precio = producto.precioProducto;
     return GestureDetector(
       child: Card(
         color: Colors.white,
@@ -33,7 +35,7 @@ class Tarjeta extends StatelessWidget{
                   SizedBox(height: 5,),
                   Text(this.textoCantidad,style: TextStyle(fontFamily: 'Monstro',color: Colors.grey,fontSize: 17),),
                   SizedBox(height: 15,),
-                  Text("${this.precio} €",style: TextStyle(fontFamily: 'Monstro',color: Colors.green, fontSize: 30),),
+                  Text("${precio} €",style: TextStyle(fontFamily: 'Monstro',color: Colors.green, fontSize: 30),),
                 ],
               ),
             ),
